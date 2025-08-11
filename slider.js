@@ -7,7 +7,13 @@ burger.addEventListener('click', () => {
     burger.classList.toggle('toggle');
 });
 
-// Слайдер (если есть на странице)
+// Инициализация AOS для анимаций
+AOS.init({
+    duration: 1000, // Длительность анимации
+    once: true // Анимация только при первом скролле
+});
+
+// Слайдер
 const slider = document.querySelector('.slider');
 if (slider) {
     const slides = document.querySelector('.slides');
@@ -59,8 +65,7 @@ if (form) {
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         if (this.checkValidity()) {
-            alert('Сообщение отправлено! (Подключим реальную отправку позже)');
-            // Для реальной отправки: используй Formspree как раньше
+            alert('Сообщение отправлено! (Настроим Telegram позже)');
         } else {
             alert('Пожалуйста, заполните все поля правильно.');
         }

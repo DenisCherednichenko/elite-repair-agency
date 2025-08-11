@@ -6,16 +6,17 @@
     <title>Элитный Ремонт - Агентство</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"> <!-- Для анимаций -->
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">Элитный Ремонт</div>
             <ul class="nav-links">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="services.html">Услуги</a></li>
-                <li><a href="portfolio.html">Портфолио</a></li>
-                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="#hero">Главная</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#contact">Контакты</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -25,16 +26,67 @@
         </nav>
     </header>
     
-    <section class="hero">
+    <section id="hero" class="hero" data-aos="fade-up">
         <h1>Элитный ремонт: пространство, которое вдохновляет</h1>
         <p>Мы превращаем квартиры, дома и офисы в шедевры дизайна. С первыми успешными проектами, мы гарантируем премиум-качество и индивидуальный подход.</p>
-        <a href="contact.html" class="btn">Заказать консультацию</a>
+        <a href="#contact" class="btn">Заказать консультацию</a>
+    </section>
+    
+    <section id="services" class="services" data-aos="fade-up">
+        <h1>Наши премиум-услуги</h1>
+        <div class="service-list">
+            <div class="service-item" data-aos="zoom-in" data-aos-delay="100">
+                <h2>Ремонт квартир под ключ</h2>
+                <p>От концепции дизайна до финальной отделки с использованием элитных материалов.</p>
+            </div>
+            <div class="service-item" data-aos="zoom-in" data-aos-delay="200">
+                <h2>Элитный ремонт домов</h2>
+                <p>Индивидуальные проекты, сочетающие роскошь и комфорт.</p>
+            </div>
+            <div class="service-item" data-aos="zoom-in" data-aos-delay="300">
+                <h2>Офисные пространства</h2>
+                <p>Функциональные интерьеры для бизнеса с акцентом на стиль и продуктивность.</p>
+            </div>
+            <div class="service-item" data-aos="zoom-in" data-aos-delay="400">
+                <h2>Дизайн интерьера</h2>
+                <p>Консультации, 3D-визуализация и полная реализация идей.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="portfolio" class="portfolio" data-aos="fade-up">
+        <h1>Наши избранные проекты</h1>
+        <div class="slider" data-aos="fade-right">
+            <div class="slides">
+                <div class="slide"><img src="https://via.placeholder.com/800x500?text=Проект+1" alt="Проект 1"></div>
+                <div class="slide"><img src="https://via.placeholder.com/800x500?text=Проект+2" alt="Проект 2"></div>
+                <div class="slide"><img src="https://via.placeholder.com/800x500?text=Проект+3" alt="Проект 3"></div>
+            </div>
+            <div class="navigation">
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+            <div class="dots"></div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact" data-aos="fade-up">
+        <h1>Свяжитесь с нами для консультации</h1>
+        <form id="contact-form" data-aos="zoom-in">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="email" placeholder="Ваш email" required>
+            <textarea placeholder="Ваше сообщение" required></textarea>
+            <button type="submit" class="btn">Отправить запрос</button>
+        </form>
+        <p>Телефон: +7 (XXX) XXX-XX-XX</p>
+        <p>Email: info@elitrepair.ru</p>
     </section>
     
     <footer>
         <p>&copy; 2025 Элитный Ремонт. Все права защищены.</p>
     </footer>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> <!-- Для анимаций -->
     <script src="slider.js"></script>
 </body>
 </html>
