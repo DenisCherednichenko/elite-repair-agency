@@ -359,3 +359,25 @@ body.background-animation::after {
     position: relative;
     z-index: 2;
 }
+/* Стили для иконок */
+.service-icon, .portfolio-icon {
+    margin-bottom: 10px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Убедимся, что иконки не перекрывают текст */
+.service-item, .slide {
+    position: relative;
+    text-align: center;
+}
+
+/* Адаптация градиента иконок */
+slide svg, .service-item svg {
+    display: block;
+    margin: 0 auto;
+}
